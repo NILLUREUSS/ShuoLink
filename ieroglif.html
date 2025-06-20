@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ShuōLink</title>
+    <link rel="stylesheet" href="/css/main.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;500&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="wrapper">
+        <header class ="container">
+            <span class="logo">ShuōLink</span>
+            <div class="icon">
+                <img src="/img/icon4.png" alt="">
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="/">Главная</a></li>
+                    <li ><a href ="/about.html">Темы</a></li>
+                    <li><a href ="tests.html">Тесты</a></li>
+                    <li><a href ="topiki.html">Топики</a></li>
+                    <li ><a href ="gramma.html">Грамматика</a></li>
+                    <li class ="active"><a href ="ieroglif.html">Иероглифика</a></li>
+                    <li class ="btn"><a href="/contacts.html">О проекте</a></li>
+                </ul>
+            </nav>
+        </header>  
+        <section class="hero-section">
+            <div class="hero-content">
+                <h1>Изучайте китайские иероглифы</h1>
+                <p>Познакомьтесь с удивительным миром китайской письменности. Учите иероглифы через их историю, написание и использование в контексте.</p>
+            </div>
+        </section>
+
+        <!-- Основной контент страницы -->
+        <main class="container hieroglyph-container">
+            <!-- Фильтры и поиск -->
+            <div class="filters">
+                <div class="search-box">
+                    <input type="text" placeholder="Поиск иероглифа или слова..." class="search-input">
+                    <button class="search-button">
+                        <!-- <i class="fas fa-search"></i> Поиск -->
+                    </button>
+                    <!-- <button><i class="fas fa-search"></i></button> -->
+                </div>
+                <div class="filter-buttons">
+                    <button class="active">Все</button>
+                    <button>HSK 1</button>
+                    <button>HSK 2</button>
+                    <button>HSK 3</button>
+                    <button>Часто используемые</button>
+                </div>
+            </div>
+
+            <!-- Сетка иероглифов -->
+            <main class="container hieroglyph-container">
+            <div class="hieroglyph-grid">
+                <!-- Иероглиф 1 -->
+                <div class="hieroglyph-card"data-hsk-level="1">
+                    <div class="character-main">
+                        <div class="character">好</div>
+                        <div class="character-info">
+                            <h3>好 (hǎo)</h3>
+                            <p class="translation">Хороший, хорошо</p>
+                            <button class="show-more-btn">Подробнее <i class="fas fa-chevron-down"></i></button>
+                        </div>
+                    </div>
+                    
+                    <div class="more-info">
+                        <div class="writing-animation">
+                            <h4>Написание иероглифа:</h4>
+                            <img src="/animations/hao.gif" alt="Анимация написания 好">
+                        </div>
+                        <div class="pronunciation">
+                            <h4>Произношение:</h4>
+                            <!-- <div class="pinyin">hǎo</div> -->
+                            <button class="play-sound" data-sound="hao.mp3">
+                                <i class="fas fa-volume-up"></i> Послушать
+                            </button>
+                            <div class="audio-notation">[ха́о]</div>
+                        </div>
+                        <div class="examples">
+                            <h4>Примеры использования:</h4>
+                            <ul>
+                                <li>你好 (nǐ hǎo) - Привет</li>
+                                <li>好吃 (hǎo chī) - Вкусный</li>
+                                <li>好看 (hǎo kàn) - Красивый</li>
+                            </ul>
+                        </div>
+                        <div class="etymology">
+                            <h4>Этимология:</h4>
+                            <p>Состоит из элементов 女 (женщина) и 子 (ребенок), символизируя гармонию.</p>
+                        </div>
+                    </div>
+                </div>
+            
+
+                <!-- Иероглиф 2 - 爱 -->
+                <div class="hieroglyph-card" data-hsk-level="1">
+                    <div class="character-main">
+                        <div class="character">爱</div>
+                        <div class="character-info">
+                            <h3>爱 (ài)</h3>
+                            <p class="translation">Любовь</p>
+                            <button class="show-more-btn">Подробнее <i class="fas fa-chevron-down"></i></button>
+                        </div>
+                    </div>
+                    <div class="more-info">
+                        <div class="writing-animation">
+                            <h4>Написание иероглифа:</h4>
+                            <img src="/animations/ai.gif" alt="Анимация написания 爱">
+                        </div>
+                        <div class="pronunciation">
+                            <h4>Произношение:</h4>
+                            <button class="play-sound" data-sound="aii.mp3">
+                                <i class="fas fa-volume-up"></i> Послушать
+                            </button>
+                            <div class="audio-notation">[ай]</div>
+                        </div>
+                        <div class="examples">
+                            <h4>Примеры использования:</h4>
+                            <ul>
+                                <li>爱情 (ài qíng) - Романтическая любовь</li>
+                                <li>爱人 (ài rén) - Супруг/супруга</li>
+                                <li>爱国 (ài guó) - Патриотизм</li>
+                            </ul>
+                        </div>
+                        <div class="etymology">
+                            <h4>Этимология:</h4>
+                            <p>Содержит элементы 爫 (рука), 冖 (крыша) и 友 (друг), символизируя защиту и дружбу.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Иероглиф 3 - 学 -->
+                <div class="hieroglyph-card common">
+                    <div class="character-main">
+                        <div class="character">学</div>
+                        <div class="character-info">
+                            <h3>学 (xué)</h3>
+                            <p class="translation">Учиться</p>
+                            <button class="show-more-btn">Подробнее <i class="fas fa-chevron-down"></i></button>
+                        </div>
+                    </div>
+                    <div class="more-info">
+                        <div class="writing-animation">
+                            <h4>Написание иероглифа:</h4>
+                            <img src="/animations/xue.gif" alt="Анимация написания 学">
+                        </div>
+                        <div class="pronunciation">
+                            <h4>Произношение:</h4>
+                            <button class="play-sound" data-sound="xue.mp3">
+                                <i class="fas fa-volume-up"></i> Послушать
+                            </button>
+                            <div class="audio-notation">[сюэ́]</div>
+                        </div>
+                        <div class="examples">
+                            <h4>Примеры использования:</h4>
+                            <ul>
+                                <li>学生 (xué shēng) - Студент</li>
+                                <li>学校 (xué xiào) - Школа</li>
+                                <li>学习 (xué xí) - Изучать</li>
+                            </ul>
+                        </div>
+                        <div class="etymology">
+                            <h4>Этимология:</h4>
+                            <p>Состоит из элементов 子 (ребенок) под 冖 (крыша), символизируя обучение в доме.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Иероглиф 4 - 人 -->
+                <div class="hieroglyph-card"data-hsk-level="2">
+                    <div class="character-main">
+                        <div class="character">人</div>
+                        <div class="character-info">
+                            <h3>人 (rén)</h3>
+                            <p class="translation">Человек</p>
+                            <button class="show-more-btn">Подробнее <i class="fas fa-chevron-down"></i></button>
+                        </div>
+                    </div>
+                    <div class="more-info">
+                        <div class="writing-animation">
+                            <h4>Написание иероглифа:</h4>
+                            <img src="/animations/ren.gif" alt="Анимация написания 人">
+                        </div>
+                        <div class="pronunciation">
+                            <h4>Произношение:</h4>
+                            <button class="play-sound" data-sound="zhong.mp3">
+                                <i class="fas fa-volume-up"></i> Послушать
+                            </button>
+                            <div class="audio-notation">[жэ́нь]</div>
+                        </div>
+                        <div class="examples">
+                            <h4>Примеры использования:</h4>
+                            <ul>
+                                <li>人民 (rén mín) - Народ</li>
+                                <li>中国人 (zhōng guó rén) - Китаец</li>
+                                <li>人口 (rén kǒu) - Население</li>
+                            </ul>
+                        </div>
+                        <div class="etymology">
+                            <h4>Этимология:</h4>
+                            <p>Один из самых древних иероглифов, изображает фигуру идущего человека.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Иероглиф 5 - 大 -->
+                <div class="hieroglyph-card common" data-hsk-level="2">
+                    <div class="character-main">
+                        <div class="character">大</div>
+                        <div class="character-info">
+                            <h3>大 (dà)</h3>
+                            <p class="translation">Большой</p>
+                            <button class="show-more-btn">Подробнее <i class="fas fa-chevron-down"></i></button>
+                        </div>
+                    </div>
+                    <div class="more-info">
+                        <div class="writing-animation">
+                            <h4>Написание иероглифа:</h4>
+                            <img src="/animations/da.gif" alt="Анимация написания 大">
+                        </div>
+                        <div class="pronunciation">
+                            <h4>Произношение:</h4>
+                            <button class="play-sound" data-sound="da.mp3">
+                                <i class="fas fa-volume-up"></i> Послушать
+                            </button>
+                            <div class="audio-notation">[да́]</div>
+                        </div>
+                        <div class="examples">
+                            <h4>Примеры использования:</h4>
+                            <ul>
+                                <li>大学 (dà xué) - Университет</li>
+                                <li>大家 (dà jiā) - Все</li>
+                                <li>大概 (dà gài) - Приблизительно</li>
+                            </ul>
+                        </div>
+                        <div class="etymology">
+                            <h4>Этимология:</h4>
+                            <p>Изображает человека с раскинутыми руками, символизируя что-то большое.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Иероглиф 6 - 中 -->
+                <div class="hieroglyph-card" data-hsk-level="3">
+                    <div class="character-main">
+                        <div class="character">中</div>
+                        <div class="character-info">
+                            <h3>中 (zhōng)</h3>
+                            <p class="translation">Середина, Китай</p>
+                            <button class="show-more-btn">Подробнее <i class="fas fa-chevron-down"></i></button>
+                        </div>
+                    </div>
+                    <div class="more-info">
+                        <div class="writing-animation">
+                            <h4>Написание иероглифа:</h4>
+                            <img src="/animations/zhong.gif" alt="Анимация написания 中">
+                        </div>
+                        <div class="pronunciation">
+                            <h4>Произношение:</h4>
+                            <button class="play-sound" data-sound="zhong.mp3">
+                                <i class="fas fa-volume-up"></i> Послушать
+                            </button>
+                            <div class="audio-notation">[чжун]</div>
+                        </div>
+                        <div class="examples">
+                            <h4>Примеры использования:</h4>
+                            <ul>
+                                <li>中国 (zhōng guó) - Китай</li>
+                                <li>中文 (zhōng wén) - Китайский язык</li>
+                                <li>中心 (zhōng xīn) - Центр</li>
+                            </ul>
+                        </div>
+                        <div class="etymology">
+                            <h4>Этимология:</h4>
+                            <p>Изображает стрелу, попавшую в центр мишени, символизируя середину.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Иероглиф 7 - 国 -->
+                <div class="hieroglyph-card common" >
+                    <div class="character-main">
+                        <div class="character">国</div>
+                        <div class="character-info">
+                            <h3>国 (guó)</h3>
+                            <p class="translation">Страна</p>
+                            <button class="show-more-btn">Подробнее <i class="fas fa-chevron-down"></i></button>
+                        </div>
+                    </div>
+                    <div class="more-info">
+                        <div class="writing-animation">
+                            <h4>Написание иероглифа:</h4>
+                            <img src="/animations/guo.gif" alt="Анимация написания 国">
+                        </div>
+                        <div class="pronunciation">
+                            <h4>Произношение:</h4>
+                            <button class="play-sound" data-sound="guo.mp3">
+                                <i class="fas fa-volume-up"></i> Послушать
+                            </button>
+                            <div class="audio-notation">[го́]</div>
+                        </div>
+                        <div class="examples">
+                            <h4>Примеры использования:</h4>
+                            <ul>
+                                <li>国家 (guó jiā) - Государство</li>
+                                <li>外国 (wài guó) - Иностранное государство</li>
+                                <li>国际 (guó jì) - Международный</li>
+                            </ul>
+                        </div>
+                        <div class="etymology">
+                            <h4>Этимология:</h4>
+                            <p>Состоит из 囗 (граница) и 玉 (драгоценность), символизируя ценную территорию.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Иероглиф 8 - 语 -->
+                <div class="hieroglyph-card" data-hsk-level="3">
+                    <div class="character-main">
+                        <div class="character">语</div>
+                        <div class="character-info">
+                            <h3>语 (yǔ)</h3>
+                            <p class="translation">Язык, речь</p>
+                            <button class="show-more-btn">Подробнее <i class="fas fa-chevron-down"></i></button>
+                        </div>
+                    </div>
+                    <div class="more-info">
+                        <div class="writing-animation">
+                            <h4>Написание иероглифа:</h4>
+                            <img src="/animations/yu.gif" alt="Анимация написания 语">
+                        </div>
+                        <div class="pronunciation">
+                            <h4>Произношение:</h4>
+                            <button class="play-sound" data-sound="yu.mp3">
+                                <i class="fas fa-volume-up"></i> Послушать
+                            </button>
+                            <div class="audio-notation">[юй]</div>
+                        </div>
+                        <div class="examples">
+                            <h4>Примеры использования:</h4>
+                            <ul>
+                                <li>汉语 (hàn yǔ) - Китайский язык</li>
+                                <li>英语 (yīng yǔ) - Английский язык</li>
+                                <li>语法 (yǔ fǎ) - Грамматика</li>
+                            </ul>
+                        </div>
+                        <div class="etymology">
+                            <h4>Этимология:</h4>
+                            <p>Состоит из 讠(упрощенное 言 - речь) и 吾 (я), означая "моя речь".</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        <script src="/js/ieroglif.js"></script>
+    </div> 
+    
+    <footer style="width: 100%;">
+        <div class="blocks container">
+            <div>
+                <span class="logo">ShuōLink</span>
+                <p>Ваш помощник в изучении китайского. Уроки, практика и персонализированный подход для быстрого прогресса. </p>
+            </div>
+            <div>
+                <h4>О проекте</h4>
+                <ul>
+                    <li>Темы</li>
+                    <li>Топики</li>
+                    <li>Тесты</li>
+                    <li>Грамматика</li>
+                    
+                </ul>
+            </div>
+            <div>
+                <h4>Наши контакты</h4>
+                <p>nillureuss@gmail.com </p>
+                <p>+7(918)463-91-98</p>
+            </div>
+        </div>
+        <hr>
+        <p>Сайт создан в учебных целях. © 2025. | Дипломный проект Штанковой М.К.</p>
+    </footer>
+  
+</body>
+
+</html>

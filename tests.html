@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ShuōLink</title>
+    <link rel="stylesheet" href="/css/main.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;500&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="wrapper">
+        <header class ="container">
+            <span class="logo">ShuōLink</span>
+            <div class="icon">
+                <img src="/img/icon4.png" alt="">
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="/">Главная</a></li>
+                    <li ><a href ="/about.html">Темы</a></li>
+                    <li class ="active"><a href ="tests.html">Тесты</a></li>
+                    <li><a href ="topiki.html">Топики</a></li>
+                    <li ><a href ="gramma.html">Грамматика</a></li>
+                    <li><a href ="ieroglif.html">Иероглифика</a></li>
+                    <li class ="btn"><a href="/contacts.html">О проекте</a></li>
+                </ul>
+            </nav>
+        </header>  
+
+       
+
+        <!-- Секция с тестами -->
+         <section class="tests-hero">
+            <div class="container">
+                <h1>Проверьте свои знания китайского</h1>
+                <p class="subtitle">"Не бойтесь ошибаться - каждый неправильный ответ делает ваш китайский сильнее!"</p>
+                <!-- <img src="/img/test-hero.png" alt="Иллюстрация тестов" class="hero-image"> -->
+            </div>
+        </section>
+
+        
+
+        <!-- Секция с тестами -->
+        <section class="tests-list container">
+            <!-- Тест на определение уровня -->
+            <div class="test-card" id="level-test">
+                <div class="test-preview" onclick="toggleTest('level-test')">
+                    <div class="test-badge">HSK 1-6</div>
+                    <h2>Определение уровня китайского</h2>
+                    <p>20 вопросов · Точное определение вашего уровня HSK</p>
+                    <button class="toggle-btn">Начать тест</button>
+                </div>
+                
+                <div class="test-content">
+                    <div class="test-questions"></div>
+                    <div class="test-actions">
+                        <button class="submit-btn" onclick="checkLevelTestResults()">Проверить результаты</button>
+                        <button class="collapse-btn" onclick="toggleTest('level-test')">Свернуть тест</button>
+                    </div>
+                    <div class="test-results">
+            <div class="level-result">
+                <h3>Ваш уровень китайского:</h3>
+                <div class="level-badge">HSK <span id="hsk-level">-</span></div>
+                <div class="level-description" id="level-description"></div>
+                <div class="level-stats">
+                    <p>Правильных ответов: <span id="correct-answers">0</span>/<span id="total-questions">0</span></p>
+                    <p>Процент правильных: <span id="percentage">0</span>%</p>
+                </div>
+                <div class="level-progress">
+                    <div class="progress-bar" id="progress-bar"></div>
+                </div>
+                <div class="levels-scale">
+                    <span>HSK 1</span><span>HSK 2</span><span>HSK 3</span><span>HSK 4</span><span>HSK 5</span><span>HSK 6</span>
+                </div>
+            </div>
+        </div>
+                </div>
+            </div>
+
+            <!-- Тест по иероглифике -->
+            <div class="test-card" id="characters-test">
+                <div class="test-preview" onclick="toggleTest('characters-test')">
+                    <div class="test-badge">Начальный</div>
+                    <h2>Тест по иероглифике</h2>
+                    <p>15 вопросов · Проверьте знание базовых иероглифов</p>
+                    <button class="toggle-btn">Начать тест</button>
+                </div>
+                
+                <div class="test-content">
+                    <div class="test-questions"></div>
+                    <div class="test-actions">
+                        <button class="submit-btn" onclick="checkResults('characters-test')">Проверить результаты</button>
+                        <button class="collapse-btn" onclick="toggleTest('characters-test')">Свернуть тест</button>
+                    </div>
+                    <div class="test-results"></div>
+                </div>
+            </div>
+
+            <!-- Тест по грамматике -->
+            <div class="test-card" id="grammar-test">
+                <div class="test-preview" onclick="toggleTest('grammar-test')">
+                    <div class="test-badge">Средний</div>
+                    <h2>Грамматический тест</h2>
+                    <p>12 вопросов · Проверка грамматических конструкций</p>
+                    <button class="toggle-btn">Начать тест</button>
+                </div>
+                
+                <div class="test-content">
+                    <div class="test-questions"></div>
+                    <div class="test-actions">
+                        <button class="submit-btn" onclick="checkResults('grammar-test')">Проверить результаты</button>
+                        <button class="collapse-btn" onclick="toggleTest('grammar-test')">Свернуть тест</button>
+                    </div>
+                    <div class="test-results"></div>
+                </div>
+            </div>
+            <div class="test-card" id="culture-test">
+                <div class="test-preview" onclick="toggleTest('culture-test')">
+                    <div class="test-badge">Начальный</div>
+                    <h2>Тест на знание культуры Китая</h2>
+                    <p>12 вопросов · Проверка общих знаний о Китае</p>
+                    <button class="toggle-btn">Начать тест</button>
+                </div>
+                
+                <div class="test-content">
+                    <div class="test-questions"></div>
+                    <div class="test-actions">
+                        <button class="submit-btn" onclick="checkResults('culture-test')">Проверить результаты</button>
+                        <button class="collapse-btn" onclick="toggleTest('culture-test')">Свернуть тест</button>
+                    </div>
+                    <div class="test-results"></div>
+                </div>
+            </div>
+        </section>
+        <script src="/js/tests.js"></script>
+
+           <footer>
+        <div class="blocks container">
+            <div>
+                <span class="logo">ShuōLink</span>
+                <p>Ваш помощник в изучении китайского. Уроки, практика и персонализированный подход для быстрого прогресса. </p>
+            </div>
+             <div>
+                <h4>О проекте</h4>
+                <ul>
+                    <li>Темы</li>
+                    <li>Топики</li>
+                    <li>Тесты</li>
+                    <li>Грамматика</li>
+                </ul>
+            </div>
+            <div>
+                <h4>Наши контакты</h4>
+                <p>nillureuss@gmail.com </p>
+                <p>+7(918)463-91-98</p>
+            </div>
+        </div>
+        <hr>
+        <p>Сайт создан в учебных целях. © 2025. | Дипломный проект Штанковой М.К.</p>
+    </footer>
+   
+</body>
+
+</html>

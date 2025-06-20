@@ -1,0 +1,1958 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;0,700;0,800;1,500&display=swap');
+
+/* по умолчанию нет  */
+*{
+    margin: 0;
+    padding: 0;
+}
+/* По умолччанию шрифт и размер */
+body{
+        font-family: 'Poppins', sans-serif;
+        font-weight: 400;
+        color: #fff ; 
+        font-size: 18px;
+}
+/* убираю нижнее подчеркивание на ссылках */
+a{
+    text-decoration: none;
+
+}
+/* жирина изображения  */
+img{
+    max-width: 100%;
+}
+
+
+.wrapper{
+    /* background: #850f0f; */
+    background: linear-gradient(0deg,rgba(0, 0, 0, 1) 0%, rgba(61, 4, 4, 1) 100%);
+    width: 100%;
+    /* background: radial-gradient(circle,rgba(184, 40, 0, 1) 0%, rgba(0, 0, 0, 1) 100%);
+    min-height: 100vh;  */
+    overflow-x: hidden;
+}
+
+.container{
+    width: 1400px;
+    margin: 0 auto;
+    /* display: flex;
+    align-items: center;
+    justify-content: space-between; */
+}
+
+header{
+    padding: 50px 0;
+    /* display: inline-flex;  */
+    /* align-items: center;
+    position: relative;  */
+}
+
+.header-logo-group {
+    display: inline-flex;
+    align-items: center;
+    vertical-align: middle;
+}
+/* логотип в шапке и логотип во флуторе */
+header .logo, footer .blocks .logo {
+    text-transform:  uppercase;
+    font-size: 29px;
+    font-weight: 800;
+    display: inline-block; 
+    vertical-align: middle; 
+}
+header .icon {
+    display: inline-block;
+    margin-left: 10px; /* Отступ от логотипа */
+    vertical-align: middle;
+}
+
+header .icon img {
+    width: 55px; /* Размер иконки */
+    height: 55px;
+    vertical-align: middle;
+}
+
+header nav{
+    float: right;
+    width: 50%;
+}
+
+header nav ul{
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    z-index: 2;
+    position: relative;
+    text-align: center; /* Центрируем меню */
+    flex-wrap: nowrap;
+    padding: 0;
+    margin: 0;
+
+}
+
+header nav ul li{
+    display: inline-block;
+    white-space: nowrap;
+    margin: 0 25px; /* отступы слева и справа  */
+    position: relative; /* для правильного позиционирования псевдоэлементов */
+    
+}
+
+header nav ul li a{
+    color: #fff;
+    padding: 10px 0; /*  вертикальные отступы для ссылок */
+    display: inline-block; 
+
+}
+
+header nav ul li.active::after {
+    content: '';
+    display: block;
+    width: 50px;
+    height: 3px;
+    background: #FF0000;
+    margin: 5px auto 0; /* центрирую полоску и добавляю отступ сверху */
+    /* border-radius: 10px; */
+    /* position: relative;
+    top: 5px; */
+    /* left: -15px; */
+}
+
+header nav ul li:not(.active):not(.btn) a:hover{
+    border-bottom: 3px solid #FF0000;
+}
+/* кнопка в меню шапки и кнопка внизу страницы  */
+header nav ul li.btn a, .email .block button{
+    background: #8C000E;
+    padding: 9px 17px;
+    border-radius: 10px ;
+    transition: all 500ms ease ;
+    /* background: #2A7B9B */
+}
+/* кнопка в меню шапки и кнопка внизу страницы  */
+header nav ul li.btn a:hover, .email .block button:hover{
+    background: #A80340 ;
+}
+
+.hero{
+    padding-bottom: 100px;
+    position: relative;
+    z-index: 1;
+}
+.hero--info{
+    width: 530px;
+    padding-top: 70px;
+}
+.hero--info h2{
+    color: #F23F3F;
+    font-size: 20px;
+    font-weight: 600;
+}
+.hero--info h1{
+    font-size: 50px;
+    font-weight: 600;
+}
+.hero--info p{
+    font-weight: 500;
+    line-height: 170%;
+    margin: 30px 0;
+}
+/* кнопка на главной странице верхней части сайта и кпопка на странице про нас */
+.hero--info .btn, 
+.hero-about .info .btn {
+    background: #8C000E;
+    color: #fff;
+    border-radius: 50px;
+    padding: 15px 30px;
+    border: 0;
+    transition: all 500ms ease;
+    font-size: 18px;
+
+}
+.hero--info .btn:hover, 
+.hero-about .info .btn:hover{
+    
+    cursor: pointer ;
+    transform: scale(1.1);
+}
+
+.hero img{
+    /* position: absolute;
+    top: -150px;
+    right: 0; */
+    position: absolute;
+    right: -290px;
+    top: -55px;
+   
+
+}
+
+/* Секуия игр */
+
+.trending{
+    padding-top: 35px;
+}
+.trending h3{
+    font-weight: 600;
+    font-size: 31px;
+
+}
+ .trending .see-all, .projects .see-all{
+    color: #fff;
+    background: #8C000E;
+    border-radius: 10px;
+    padding: 12px 23px;
+    float: right;
+    display: block;
+    transition: all 500ms ease;
+ }
+
+
+ .trending .see-all:hover, .projects .see-all:hover{
+    transform: scale(1.1);
+ }
+
+ /* игры */
+.trending .games{
+    display: flex;
+    justify-content: space-between;  
+    width: 100%;
+    padding: 50px 0;
+    
+}
+/* надписи под картинкой */
+.trending .games span{
+
+    display: block;
+    text-align: center;
+    margin-top: 20px;
+}
+.trending .games .blook > img:first-child {
+    width: 260px;
+    height: 350px;
+    object-fit: cover; /* Заполнение пространства с сохранением пропорций */
+    display: block;
+    border-radius: 15px; /* Скругление углов изображения */
+}
+
+/* Огоньки под картинкой  */
+.trending .games span img{
+    width: 24px; /* Фиксированный размер иконки */
+    height: 24px;
+    margin-right: 10px; /* Отступ между иконкой и текстом */
+    position: static; /* Убираем absolute позиционирование */
+    top: auto;
+    
+    position: relative;
+    top: 5px;
+    margin-right: 7px;
+}
+/*  */
+/* провежуточная секция с надписью */
+.big-text{
+    padding: 50px 0;
+    font-size: 35px;
+    font-weight: 600;
+    text-align: center;
+    width: 100%;
+    max-width: 900px;
+    margin: 0 auto;
+    /* width: 800px; */
+
+}
+/* Баннер  */
+.banner{
+    padding: 80px 0;
+}
+.banner h3{
+    font-size: 30px;
+    font-weight: 600;
+    margin-bottom: 30px;
+}
+.banner p{
+    line-height: 170%;
+    margin-bottom: 50px;
+    width: 800px; 
+}
+.banner img{
+    width: 100%;
+    margin-bottom: 30px;
+}
+/* секция с изображением большим */
+.features{
+    background: url('/img/back.png')  no-repeat center center fixed;
+    background-size: cover;
+    padding: 80px 0 ;
+}
+/* стиль блока */
+.features h3, 
+.features p{
+    margin-bottom: 20px;
+    text-align: center;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.features h3  {
+    font-size: 30px;
+}
+.features .info{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+
+}
+
+.features .info .block{
+    text-align: center;
+    width: 20%;
+    margin: 30px 2%;
+}
+.features .info .block img{
+    margin-bottom: 15px;
+}
+/*  */
+.projects{
+    padding: 100px 0;
+
+}
+.projects h3{
+    font-size: 30px;
+    text-align: center;
+
+}
+.projects p{
+    margin: 40px 0;
+    text-align: center;
+}
+.projects .images{
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 25px;
+}
+.projects .see-all{
+    float: none ;
+    width: 60px;
+    text-align: center;
+    margin: 0 auto;
+ }
+ @media (min-width: 768px) {
+    body {
+        font-size: 18px;
+    }
+
+    header {
+        padding: 50px 0;
+        text-align: left;
+    }
+
+    header nav ul {
+        flex-direction: row;
+        justify-content: flex-end;
+    }
+
+    .hero {
+        text-align: left;
+    }
+
+    .hero--info {
+        width: 530px;
+    }
+
+    .hero img {
+        position: absolute;
+        right: -290px;
+        top: -55px;
+    }
+
+    .trending .games {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .features .info {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    /* .features .info .block {
+        width: 45%;
+    } */
+
+    /* .projects .images {
+        flex-direction: row;
+    } */
+}
+
+ /* Нижняя часть  */
+/* .email{
+    padding-bottom: 120px;
+}
+.email h3{
+    margin-top: 60px;
+    font-size: 30px ;
+}
+.email .block{
+
+    background: #662B2B;
+    margin-top: 30px;
+    border-radius: 10px;
+    padding: 40px 3%;
+    width: 94%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.email .block h4  {
+    font-size: 30px;
+    font-weight: 500;
+}
+.email .block p{
+    width: 500px;
+}
+
+.email .block input{
+    background: #fff;
+    outline: none ;
+    border: 0;
+    border-radius: 5px;
+    width: 380px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+    padding: 20px 30px;
+    position: relative;
+    right: -100px ;
+    z-index: 1;
+    padding-right: 125px;
+}
+.email .block input::placeholder{
+    color: #C78787;
+
+}
+
+.email .block button{
+    cursor:  pointer;
+    border: none;
+    padding: 14px 18px;
+    position: relative;
+    z-index: 2;
+    color: #fff;
+} */
+/* Страница про нас  */
+/* кнопка */
+.hero-about{
+    position: relative;
+}
+.hero-about .info{
+    width: 500px;
+    padding: 100px 0;
+}
+.hero-about .info h1{
+    margin-bottom: 15px;
+    font-size: 40px;
+}
+.hero-about .info .btn{
+    margin-top: 20px;
+}
+/* изображение */
+.hero-about img{
+    position: absolute;
+    right: -200px;
+    top: -50px;
+    width: 1080px; /* или любой нужный размер */
+    height: auto;
+}
+/* Блоки */
+.work{
+    padding: 80px 0;
+}
+.work h2 {
+    font-size: 25px;
+    margin-bottom: 40px;
+}
+.work .blocks{
+    display: flex;
+    justify-content: space-between;
+    
+}
+
+.work .blocks .block{
+    width: 25%;
+    border-radius: 10px;
+    padding: 50px 35px;
+    background: #1a1212;
+}
+.work .blocks .block h3{
+    font-size: 20px;
+    margin: 20px 0;
+}
+.work .blocks .block .badge{
+    border-radius: 7px  ;
+    padding: 10px 20px;
+
+}
+
+
+
+.work .blockss{
+    margin-top: 30px;
+    
+    display: flex;
+    justify-content: space-between;
+    
+}
+
+.work .blockss .block{
+    width: 25%;
+    border-radius: 10px;
+    padding: 50px 35px;
+    background: #1a1212;
+}
+.work .blockss .block h3{
+    font-size: 20px;
+    margin: 20px 0;
+}
+.work .blockss .block .badge{
+    border-radius: 7px  ;
+    padding: 10px 20px;
+}
+
+.work .blocks .block .badge.purple{
+    background:  #cc1a1a;
+}
+.work .blocks .block .badge.brown{
+    background: #cc1a1a;
+}
+.work .blocks .block .badge.green{
+    background:#cc1a1a ;
+}
+.work .blockss .block .badge.purple{
+    background: #cc1a1a ;
+}
+.work .blockss .block .badge.brown{
+    background: #cc1a1a;
+}
+.work .blockss .block .badge.green{
+    background:#cc1a1a ;
+}
+
+/* Стили для промо-блока бота */
+.bot-promo {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 50px;
+}
+
+.bot-description {
+    width: calc(65% - 10px);
+    background: #1a1212;
+    border-radius: 10px;
+    padding: 30px;
+    margin-right: 15px;
+}
+
+.bot-description h2 {
+    font-size: 25px;
+    margin-bottom: 20px;
+    color: #cc1a1a;
+}
+
+.bot-description p, .bot-description li {
+    margin-bottom: 15px;
+    line-height: 1.6;
+}
+
+.bot-description ul {
+    /* margin-left: 20px; */
+    list-style-type: none; /* Убираем стандартные маркеры */
+    padding-left: 0; /* Убираем стандартный отступ */
+    margin-left: 0;
+}
+
+.bot-description li {
+    position: relative;
+    padding-left: 30px; /* Оставляем место для иконки */
+    margin-bottom: 10px;
+    line-height: 1.6;
+}
+
+.bot-description li::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 2px;
+    width: 20px; /* Размер иконки */
+    height: 20px;
+    background-image: url('../img/coin.png'); /* Путь к вашему изображению монеты */
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.qr-code {
+    width: calc(30% - 10px);
+    text-align: center;
+    background: #1a1212;
+    border-radius: 10px;
+    padding: 30px;
+}
+
+.qr-code h3 {
+    font-size: 20px;
+    margin-bottom: 20px;
+    color: #cc1a1a;
+}
+
+.qr-code img {
+    max-width: 200px;
+    margin-bottom: 15px;
+    border-radius: 20px;
+}
+
+.qr-code a {
+    color: #cc1a1a;
+    text-decoration: none;
+}
+
+.qr-code a:hover {
+    text-decoration: underline;
+}
+@media (max-width: 768px) {
+    /* Hero Section */
+    .hero-about {
+        padding: 40px 0;
+        text-align: center;
+    }
+    
+    .hero-about .info {
+        width: 100%;
+        padding: 0 20px 40px;
+    }
+    
+    .hero-about .info h1 {
+        font-size: 28px;
+    }
+    
+    .hero-about img {
+        position: static;
+        width: 100%;
+        max-width: 400px;
+        margin: 30px auto 0;
+    }
+    
+    /* Work Blocks */
+    .work {
+        padding: 40px 20px;
+    }
+    
+    .work .blocks,
+    .work .blockss {
+        flex-direction: column;
+    }
+    
+    .work .blocks .block,
+    .work .blockss .block {
+        width: 100% !important;
+        margin-bottom: 20px;
+        padding: 30px;
+    }
+    
+    /* Bot Promo Section */
+    .bot-promo {
+        flex-direction: column;
+    }
+    
+    .bot-description,
+    .qr-code {
+        width: 100% !important;
+        margin-right: 0 !important;
+        margin-bottom: 20px;
+    }
+}
+
+/* Планшетная адаптация (768px - 992px) */
+@media (min-width: 769px) and (max-width: 992px) {
+    .hero-about img {
+        right: -100px;
+        width: 800px;
+    }
+    
+    .work .blocks .block,
+    .work .blockss .block {
+        width: 48% !important;
+        margin-bottom: 20px;
+    }
+}
+
+
+/* Стили для страницы топиков */
+/* Стили для основного контейнера с заголовком и изображением */
+.topics-hero {
+    display: flex;
+    align-items: center;
+    padding: 60px 0;
+    gap: 40px;
+    position: relative;
+    overflow: hidden; /* Скрываем часть изображения за границей */
+    min-height: 500px; /* Подберите подходящую высоту */
+    /* background: linear-gradient(to left, rgba(255,255,255,0.9) 30%, transparent 70%); */
+}
+/* Стили для блока с контентом (заголовок и описание) */
+.topics-hero .content {
+    /* flex: 1; Занимает все доступное пространство */
+    flex: 0 0 50%;
+    max-width: 700px;
+    padding: 40px;
+    z-index: 2;
+}
+/* Стили для блока с изображением */
+.topics-hero .image {
+    position: absolute;
+    right: -250px; /* Часть изображения будет за границей */
+    top: 50%;
+    transform: translateY(-50%);
+    width: 80%;
+    max-width: 1200px;
+    z-index: 1;
+    /* flex: 1;
+    text-align: center; */
+}
+/* Стили для изображения внутри блока */
+.topics-hero .image img {
+    width: 100%;
+    height: auto;
+    max-height: 500px;
+    object-fit: contain;
+    /* max-width: 100%;
+    height: auto;
+    border-radius: 10px; */
+    /* box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); */
+    
+}
+/* Стили для основного заголовка */
+.topics-hero h1 {
+    font-size: 2.5rem;
+    color: #ff0000;
+    margin-bottom: 25px;
+    font-weight: 700;
+}
+/* Стили для описания под заголовком */
+.topics-hero p {
+    font-size: 20px;
+    line-height: 2;
+    color: #ffffff;
+    max-width: 600px;
+}
+/* Стили для контейнера с топиками */
+.topics-container {
+    padding: 80px 0;
+}
+
+/* Стили для отдельного топика */
+.topic {
+    background: #f0d9d9;
+    border-radius: 10px;
+    padding: 25px;
+    margin-bottom: 30px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+/* Эффект при наведении на топик */
+.topic:hover {
+    transform: translateY(-5px);
+}
+/* Стили для заголовка топика */
+.topic h2 {
+    color: #3b1414;
+    margin-bottom: 15px;
+    font-size: 1.5rem;
+}
+/* Стили для содержимого топика (китайский текст) */
+.topic-content {
+    font-size: 1.2rem;
+    line-height: 1.8;
+    margin-bottom: 15px;
+    color: #000000;
+}
+/* Стили для кнопки показа перевода */
+.show-translation {
+    background: #cc1a1a;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+}
+/* Эффект при наведении на кнопку */
+.show-translation:hover {
+    background: #a0163a;
+    transform: scale(1.02);
+}
+/* Стили для блока с переводом */
+.translation {
+    display: none;
+    margin-top: 15px;
+    padding: 15px;
+    background: #fff;
+    border-radius: 5px;
+    border-left: 4px solid #C21B4A;
+    animation: fadeIn 0.3s ease;
+}
+/* Стили для абзацев в блоке перевода */
+.translation p {
+    margin-bottom: 8px;
+    line-height: 1.6;
+    color: #585858;
+}
+.translation p strong {
+    color:  #641111; /* Цвет как у заголовков */
+}
+/* Стили для текста с пиньинем */
+.pinyin {
+    color: #666;
+    font-style: italic;
+}
+
+/* Элементы в колонку */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+/* Медиазапрос для мобильных устройств (ширина экрана до 768px) */
+@media (max-width: 768px) {
+    .topics-hero {
+        flex-direction: column;/* Элементы в колонку */
+        padding: 40px 0;/* Уменьшаем отступы */
+    }
+    
+    .topics-hero .image {
+        order: -1;/* Изображение будет первым */
+        margin-bottom: 30px; /* Отступ снизу */
+    }
+    
+    .topics-hero h1 {
+        font-size: 2rem;/* Уменьшаем размер шрифта */
+    }
+    
+    .topic {
+        padding: 20px;/* Уменьшаем внутренние отступы */
+    }
+}
+
+
+/* Стили для страницы грамматики */
+/* .grammar-hero {
+    background: linear-gradient(135deg, #C21B4A 0%, #8C0E2D 100%);
+    color: white;
+    padding: 80px 0;
+    text-align: center;
+}
+
+.grammar-hero h1 {
+    font-size: 2.8rem;
+    margin-bottom: 20px;
+}
+
+.grammar-hero p {
+    font-size: 1.2rem;
+    max-width: 800px;
+    margin: 0 auto;
+    line-height: 1.6;
+}
+
+.grammar-container {
+    padding: 60px 0;
+    
+    
+}
+
+.grammar-section {
+    margin-bottom: 50px;
+}
+
+.grammar-section h2 {
+    color: #C21B4A;
+    font-size: 2rem;
+    margin-bottom: 25px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #f0f0f0;
+    
+}
+
+.grammar-card {
+    background: white;
+    border-radius: 8px;
+    padding: 30px;
+    margin-bottom: 30px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    border-left: 4px solid #C21B4A;
+}
+
+.grammar-card h3 {
+    color: #C21B4A;
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+}
+.grammar-card p {
+    color: #333; /* Темно-серый цвет для обычного текста */
+    /* font-size: 1rem;
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+.grammar-card .example {
+    background: #f9f9f9;
+    padding: 15px;
+    border-radius: 5px;
+    margin: 15px 0;
+    font-family: 'Noto Sans SC', sans-serif;
+    color: #1a1212;
+    
+}
+
+.grammar-card .translation {
+    color: #666;
+    font-style: italic;
+    margin-bottom: 15px;
+}
+
+.grammar-card .structure {
+    background: #1a1212;
+    color: white;
+    padding: 10px 15px;
+    border-radius: 5px;
+    font-family: monospace;
+    margin: 15px 0;
+}
+
+.grammar-tip {
+    background: #FFF9E6;
+    border-left: 4px solid #FFD700;
+    padding: 15px;
+    margin: 20px 0;
+    font-size: 0.95rem;
+    color: #5a4a3a;
+}
+
+@media (max-width: 768px) {
+    .grammar-hero {
+        padding: 60px 20px;
+    }
+    
+    .grammar-hero h1 {
+        font-size: 2.2rem;
+    }
+    
+    .grammar-card {
+        padding: 20px;
+    }
+} */ 
+
+:root {
+  --primary: #e90914;
+  --primary-dark: #5e2210;
+  --secondary: #facc00;
+  --dark: #1a1212;
+  --light: #f8f9fa; 
+  --text: #333; /* цвет описния */
+  --text-light: #666;
+}
+
+/* Анимации */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.03); }
+  100% { transform: scale(1); }
+}
+
+/* грамматическая секция */
+.grammar-hero {
+  background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+  color: white;/*  цыет описания сверху  */
+  padding: 100px 0;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.grammar-hero::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="none"><path d="M0,0 L100,0 L100,100 Q50,80 0,100 Z" fill="rgba(255,255,255,0.1)"/></svg>');
+  background-size: 100% auto;
+  background-repeat: no-repeat;
+  background-position: bottom;
+}
+
+.grammar-hero h1 {
+  font-size: 3rem;
+  margin-bottom: 20px;
+  text-shadow: 0 2px 4px rgba(0,0,0,0.2);
+  animation: fadeIn 0.8s ease-out;
+}
+
+.grammar-hero p {
+  font-size: 1.8rem;
+  max-width: 800px;
+  margin: 0 auto;
+  line-height: 1.7;
+  opacity: 0.9;
+  animation: fadeIn 1s ease-out 0.2s forwards;
+}
+
+/* Контейнер */
+.grammar-container {
+    
+  padding: 80px 0;
+  /* background-color: var(--light); */
+  background-image: radial-gradient(circle at 10% 20%, rgba(194,27,74,0.05) 0%, transparent 20%);
+}
+
+/* Секции */
+.grammar-section {
+  margin-bottom: 70px;
+  animation: fadeIn 0.6s ease-out;
+}
+
+.grammar-section h2 {
+  color: #f0d9d9;
+  font-size: 2.5rem;
+  margin-bottom: 30px;
+  padding-bottom: 15px;
+  border-bottom: 3px solid;
+  border-image: linear-gradient(to right, var(--primary), transparent) 1;
+  display: inline-block;
+  position: relative;
+}
+
+.grammar-section h2::after {
+  content: "";
+  position: absolute;
+  bottom: -3px;
+  left: 0;
+  width: 50px;
+  height: 3px;
+  background: var(--secondary);
+}
+
+/* Карточки */
+.grammar-card {
+  background: rgb(248, 219, 219);
+  border-radius: 12px;
+  padding: 50px;
+  margin: 0 auto 350px; /* Центрирование */
+  margin-bottom: 35px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+  border-left: 0;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+
+.grammar-hero{
+    background: url('/img/back3.jpg')  no-repeat center center fixed;
+    background-size: cover;
+    padding: 200px 0 ;
+    position: relative;
+    overflow: hidden;
+    animation: 1.5s ease-out;
+    margin-top: 50px;
+    
+    
+}
+.grammar-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 35px rgba(0,0,0,0.12);
+}
+
+.grammar-card::before {
+  content: ""; 
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 4px;
+  height: 100%;
+  background: linear-gradient(to bottom, var(--primary), var(--secondary));
+}
+
+.grammar-card h3 {
+  color: #2b1a1a;
+  font-size: 2rem;
+  margin-bottom: 20px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  position: relative;
+  padding-left: 40px; /* Место для монеты */
+  min-height: 30px; /* Высота монеты */
+}
+
+.grammar-card h3::before {
+  /* content: "•"; */
+  color: var(--secondary);
+  font-size: 1.5rem;
+  margin-right: 10px;
+}
+.grammar-card h3::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 30px;
+  height: 30px;
+  background-image: url('/img/coin.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  filter: drop-shadow(0 2px 3px rgba(0,0,0,0.2));
+}
+
+.grammar-card p {
+  color: #000;
+  font-size: 1.3rem;
+  line-height: 1.8;
+  margin-bottom: 20px;
+}
+
+/* Элементы карточек */
+.example {
+  background: rgba(249, 249, 249, 0.7);
+  padding: 18px;
+  border-radius: 8px;
+  margin: 20px 0;
+  font-size: 1.2rem;
+  font-family: 'Noto Sans SC', sans-serif;
+  color: var(--dark);
+  border-left: 3px solid var(--primary);
+  transition: all 0.3s ease;
+}
+
+.example:hover {
+  background: rgba(249, 249, 249, 1);
+  transform: scale(1.01);
+}
+
+.translation {
+  color: var(--text-light);
+  font-style: italic;
+  margin-bottom: 20px;
+  padding-left: 20px;
+  border-left: 2px dashed #ddd;
+}
+
+.structure {
+  background: var(--dark);
+  color: white;
+  padding: 15px 20px;
+  border-radius: 8px;
+  font-family: 'Courier New', monospace;
+  margin: 20px 0;
+  font-size: 1.2rem;
+  position: relative;
+}
+
+.structure::after {
+  content: "";
+  position: absolute;
+  bottom: -10px;
+  left: 20px;
+  width: 0;
+  height: 0;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-top: 10px solid var(--dark);
+}
+
+.grammar-tip {
+  background: rgba(196, 163, 56, 0.966);
+  border-left: 4px solid #f00505;
+  padding: 18px;
+  margin: 25px 0;
+  font-size: 1.2rem;
+  color: #1a1411;
+  border-radius: 0 8px 8px 0;
+  position: relative;
+}
+
+.grammar-tip::before {
+  content: "💡";
+  position: absolute;
+  left: -15px;
+  top: -15px;
+  font-size: 1.8rem;
+  background: white;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.1);
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+  .grammar-hero {
+    padding: 80px 20px;
+  }
+  
+  .grammar-hero h1 {
+    font-size: 2.4rem;
+  }
+  
+  .grammar-card {
+    padding: 25px;
+  }
+  
+  .grammar-section h2 {
+    font-size: 1.8rem;
+  }
+}
+
+/* Декоративные элементы *//* Декоративные китайские символы (фоновая графика) */
+.floating-chars {
+
+  position: absolute;/* Абсолютное позиционирование */
+  font-family: 'Noto Sans SC';/* Шрифт для китайских иероглифов */
+  color: rgba(255,255,255,0.1);
+  font-size: 2rem; /* Крупный размер */
+  pointer-events: none;
+}
+
+
+/* Стили для тестов страницы */
+.tests-hero {
+    /* background: linear-gradient(135deg, #8C000E 0%, #1a1212 100%); */
+    background: url('/img/back5.jpg')  no-repeat center center fixed; 
+    background-size: cover;
+    min-height:300px;
+    color: rgb(255, 255, 255);
+    padding: 100px 20px;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.tests-hero h1 {
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+}
+
+.tests-hero .subtitle {
+    font-size: 1.5rem;
+    max-width: 800px;
+    margin: 0 auto 30px;
+    line-height: 1.6;
+    font-style: italic;
+}
+
+.hero-image {
+    width: 100%;
+    max-width: 500px;
+    margin: 30px auto 0;
+    border-radius: 10px;
+    /* box-shadow: 0 10px 30px rgba(0,0,0,0.3); */
+}
+
+/* Список тестов */
+.tests-list {
+    padding: 60px 0;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+/* Карточка теста */
+.test-card {
+    background: #201616;
+    border-radius: 15px;
+    margin-bottom: 30px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+}
+
+.test-card:hover {
+    transform: translateY(-5px);
+}
+
+.test-preview {
+    padding: 25px;
+    cursor: pointer;
+    position: relative;
+}
+
+.test-badge {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background: #8C000E;
+    color: white;
+    padding: 5px 15px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 600;
+}
+
+.test-card h2 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    color: #fff;
+}
+
+.test-card .test-preview p {
+    color: #ffffff;
+    margin-bottom: 15px;
+}
+
+.toggle-btn {
+    background: #9b2c2c;
+    color: white;
+    
+    border: none;
+    padding: 10px 20px;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.toggle-btn:hover {
+    background: #555;
+}
+
+/* Содержимое теста */
+.test-content {
+    display: none;
+    padding: 0 25px 25px; ; /* Внутренние отступы */
+    border-top: 2.5px solid #da1111; /* Красная граница сверху */
+}
+
+.test-question {
+    margin-bottom: 20px;/* Отступ снизу между вопросами */
+    padding: 15px;  /* Внутренние отступы */
+    background: rgba(255,255,255,0.05);/* Полупрозрачный белый фон */
+    border-radius: 10px;/* Закругленные углы */
+}
+/* Стили для заголовка вопроса */
+.test-question h3 {
+    margin-bottom: 15px; /* Отступ снизу от заголовка */
+    color: #fff; /* Белый цвет текста */
+}
+
+.question-level {
+    font-size: 0.8rem;
+    color: #8C000E;
+    font-weight: bold;
+}
+/* Стили для вариантов ответов */
+.test-option {
+    display: block;/* Каждый вариант на новой строке */
+    margin: 10px 0;/* Отступы сверху и снизу */
+    padding: 10px;/* Внутренние отступы */
+    background: rgba(255,255,255,0.1);/* Слегка прозрачный белый фон */
+    border-radius: 5px; /* Закругленные углы */
+    cursor: pointer;/* Курсор-указатель при наведении */
+    transition: background 0.2s ease;/* Плавное изменение фона */
+}
+/* Состояние при наведении на вариант ответа */
+.test-option:hover {
+    background: rgba(189, 19, 19, 0.2);
+}
+/* Стили для радио-кнопок в вариантах ответов */
+.test-option input[type="radio"] {
+    margin-right: 10px;/* Отступ справа от радио-кнопки */
+    
+}
+
+
+/* Контейнер для кнопок действий */
+.test-actions {
+    display: flex; /* Флекс-контейнер */
+    gap: 15px; /* Расстояние между элементами */
+    margin-top: 20px; /* Отступ сверху */
+}
+/* Общие стили для кнопок отправки и сворачивания */
+.submit-btn, .collapse-btn {
+    flex: 1; /* Равномерное заполнение пространства */
+    padding: 12px;/* Внутренние отступы */
+    border: none; /* Без границы */
+    border-radius: 50px;/* Сильно закругленные углы (капсула) */
+    font-weight: 600;/* Полужирный шрифт */
+    cursor: pointer; /* Курсор-указатель */
+    transition: all 0.3s ease;/* Плавные анимации всех свойств */
+}
+/* Специфические стили для кнопки отправки */
+.submit-btn {
+    background: #8C000E;
+    color: white;
+}
+/* Состояние при наведении на кнопку отправки */
+.submit-btn:hover {
+    background: #A80340;
+}
+/* Специфические стили для кнопки сворачивания */
+.collapse-btn {
+    background: #555;
+    color: white;
+}
+/* Состояние при наведении на кнопку сворачивания */
+.collapse-btn:hover {
+    background: #777;/* Светло-серый фон */
+}
+/* Основной контейнер для результатов уровня */
+/* Стили для результатов уровня */
+.level-result {
+    text-align: center;
+    padding: 20px;
+}
+/* Стили для бейджа с уровнем */
+.level-badge {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #8C000E;
+    margin: 20px 0; /* Отступы сверху и снизу */
+    background: rgba(140, 0, 14, 0.1);
+    padding: 15px;/* Внутренние отступы */
+    border-radius: 10px;
+    display: inline-block;/* Чтобы padding работал корректно */
+}
+
+.level-description {
+    font-size: 1.1rem;/* Чуть увеличенный размер шрифта */
+    line-height: 1.6;/* Межстрочный интервал */
+    margin-bottom: 30px;/* Отступ снизу */
+}
+/* Контейнер для прогресс-бара */
+.level-progress {
+    height: 10px; /* Высота прогресс-бара */
+    background: #333;/* Темный фон для всей шкалы */
+    border-radius: 5px; /* Закругленные углы */
+    margin: 30px 0;/* Отступы сверху и снизу */
+    overflow: hidden; /* Скрывает содержимое за границами */
+}
+/* Индикатор прогресса */
+.progress-bar {
+    height: 100%;/* Заполняет всю высоту контейнера */
+    background: linear-gradient(to right, #8C000E, #A80340);
+    width: 0%; /* Начальная ширина (будет изменяться JavaScript) */
+    transition: width 1s ease;/* Плавная анимация изменения ширины */
+} 
+
+.levels-scale {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+    font-size: 0.9rem;
+    color: #ccc;
+}
+
+/* Общие результаты */
+.test-results {
+    margin-top: 30px;
+    padding: 20px;
+    background: rgba(255,255,255,0.05);
+    border-radius: 10px;
+    display: none;
+    animation: fadeIn 0.5s ease-out;
+}
+
+.test-results h3 {
+    color: #fff;
+    margin-bottom: 15px;
+}
+
+.test-results p {
+    color: #eee;
+    line-height: 1.6;
+}
+
+/* Анимации */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Адаптация для мобильных */
+@media (max-width: 768px) {
+    .tests-hero {
+        padding: 60px 20px;
+    }
+    
+    .tests-hero h1 {
+        font-size: 2rem;
+    }
+    
+    .test-actions {
+        flex-direction: column;
+    }
+    
+    .test-preview,
+    .test-content {
+        padding: 20px;
+    }
+}
+
+/* Hero-секция */
+
+/* Фильтры и поиск */
+.filters {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+    gap: 20px;
+}
+
+.search-box {
+    display: flex;
+    flex-grow: 1;
+    max-width: 500px;
+}
+
+.search-box input {
+    padding: 12px 15px;
+    border: 1px solid #ddd;
+    border-radius: 30px 0 0 30px;
+    width: 100%;
+    font-size: 1rem;
+    outline: none;
+}
+
+.search-box button {
+    background: #8C000E;
+    color: white;
+    border: none;
+    padding: 0 20px;
+    border-radius: 0 30px 30px 0;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.search-box button:hover {
+    background: #A80340;
+}
+
+.filter-buttons {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.filter-buttons button {
+    padding: 8px 15px;
+    background: #f0f0f0;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.filter-buttons button.active,
+.filter-buttons button:hover {
+    background: #8C000E;
+    color: white;
+}
+
+.hero-section {
+    background: url('/img/back4.jpg')  no-repeat center center fixed; 
+    background-size: cover;
+    min-height:300px;
+    color: rgb(255, 255, 255);
+    padding: 100px 20px;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.hero-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.hero-content h1 {
+    font-size: 2.8rem;
+    margin-bottom: 20px;
+    font-weight: 700;
+}
+
+.hero-content p {
+    font-size: 1.4rem;
+    line-height: 1.6;
+}
+
+/* Фильтры и поиск */
+.filters {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+    gap: 20px;
+}
+
+.search-box {
+    display: flex;
+    flex-grow: 1;
+    max-width: 500px;
+    position: relative; /* Добавляем для позиционирования кнопки */
+}
+
+.search-box input {
+    padding: 12px 50px 12px 15px; /* Увеличиваем правый отступ для кнопки */
+    border: 1px solid #ddd;
+    border-radius: 30px;
+    width: 100%;
+    font-size: 1rem;
+    outline: none;
+}
+
+/* Стиль для кнопки внутри поля */
+.search-box button {
+    position: absolute;
+    right: 4px; /* Отступ от правого края */
+    top: 4px; /* Отступ сверху */
+    bottom: 4px; /* Отступ снизу */
+    background: #8C000E;
+    color: white;
+    border: none;
+    border-radius: 50%; /* Круглая форма */
+    width: 34px; /* Фиксированная ширина */
+    height: 34px; /* Фиксированная высота */
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    transition: 
+        background 0.3s ease,
+        transform 0.2s cubic-bezier(0.18, 0.89, 0.32, 1.28);
+}
+
+.search-box button:hover {
+    background: #A80340;
+    transform: scale(1);
+}
+.search-box button:active {
+    transform: scale(0.9);
+    transition: transform 0.1s ease;
+}
+
+/* Стиль для иконки лупы */
+.search-box button i {
+    font-size: 16px;
+}
+
+.filter-buttons {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.filter-buttons button {
+    padding: 8px 15px;
+    background: #f0f0f0;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.filter-buttons button.active,
+.filter-buttons button:hover {
+    background: #8C000E;
+    color: white;
+}
+
+/* Сетка иероглифов */
+.hieroglyph-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 30px;
+    margin-bottom: 50px;
+}
+
+/* Карточка иероглифа */
+.hieroglyph-card {
+    background: #ecdfdf;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s;
+    display: flex;
+    flex-direction: column;
+}
+
+.character-main {
+    padding: 30px;
+    text-align: center;
+}
+
+.character {
+    font-size: 80px;
+    font-family: 'Noto Sans SC', sans-serif;
+    color: #000000;
+    line-height: 1;
+    margin-bottom: 15px;
+}
+
+.character-info h3 {
+    font-size: 1.5rem;
+    margin-bottom: 5px;
+    color: #8C000E;
+}
+
+.translation {
+    color: #000000;
+    font-size: 1rem;
+    margin-bottom: 15px;
+}
+
+/* Кнопка "Подробнее" */
+.show-more-btn {
+    background: none;
+   border: 2px solid #8C000E; 
+    color: #8C000E;
+    padding: 8px 20px;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: all 0.3s;
+    font-size: 0.9rem;
+    margin: 0 auto;
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.show-more-btn:hover {
+    background: #8C000E;
+    color: white;
+}
+
+.show-more-btn i {
+    transition: transform 0.3s;
+}
+
+/* Раскрывающаяся информация */
+.more-info {
+    padding: 0;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s ease-out;
+    background: #ecdfdf;
+}
+
+.hieroglyph-card.active .more-info {
+    max-height: 1500px; /* Большое значение для всего контента */
+    padding: 20px;
+}
+
+.hieroglyph-card.active .show-more-btn i {
+    transform: rotate(180deg);
+}
+
+/* Стили содержимого раскрытой части */
+.writing-animation {
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.writing-animation img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+.pronunciation {
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.pinyin {
+    font-size: 1rem;
+    color: #8C000E;
+    margin: 5px 0;
+    font-weight: 500;
+}
+
+.audio-notation {
+    color: #666;
+    font-style: italic;
+    font-size: 0.9rem;
+    margin-top: 10px;
+}
+
+.examples {
+    margin-bottom: 15px;
+}
+
+.examples h4, 
+.writing-animation h4, 
+.pronunciation h4, 
+.etymology h4 {
+    color: #610101;
+    font-size: 1.1rem;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.examples ul {
+    padding-left: 20px;
+    margin: 0;
+    color: #000000;
+}
+
+.examples li {
+    margin-bottom: 8px;
+    line-height: 1.5;
+    font-size: 0.95rem;
+}
+
+.etymology p {
+    color: #000000;
+    line-height: 1.5;
+    font-size: 0.95rem;
+    text-align: center;
+    margin-bottom: 0;
+}
+
+.play-sound {
+    background: #8C000E;
+    color: white;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 20px;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: background 0.3s;
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.play-sound:hover {
+    background: #A80340;
+}
+
+.play-sound i {
+    font-size: 1.1em;
+}
+
+
+/* Анимации */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.hieroglyph-card {
+    animation: fadeIn 0.5s ease-out forwards;
+    opacity: 0;
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+    .hieroglyph-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .character {
+        font-size: 60px;
+    }
+    
+    .hero-content h1 {
+        font-size: 2rem;
+    }
+    
+    .hero-content p {
+        font-size: 1rem;
+    }
+    
+    .filters {
+        flex-direction: column;
+    }
+    
+    .search-box {
+        max-width: 100%;
+    }
+}
+
+
+
+/* Флутер */
+ footer{
+    background: #000 ;
+    padding: 50px 0;
+    font-size: 14px;
+}
+    
+
+ footer .blocks{
+    display: flex;
+    justify-content: space-between;
+ }
+ footer .blocks p{
+    width: 300px;
+    margin: 15px 0;
+    
+ }
+ footer .blocks h4{
+    font-weight: 500;
+    font-size: 17px;
+
+ }
+ footer .blocks  ul{
+    list-style: none;
+ }
+ footer .blocks  ul li{
+    margin-top: 7px;
+    opacity: 0.8;
+ }
+ footer hr{
+    margin: 30px 0;
+    border: 0;
+    height: 0.6px;
+    background:  #ccc;
+ }
+ footer > p{
+    text-align: center;
+ }
+/* Мобильная адаптация (до 768px) */
+@media (max-width: 768px) {
+    footer {
+        padding: 30px 0;
+    }
+    
+    footer .blocks {
+        flex-direction: column; /* Колонка вместо ряда */
+        gap: 30px; /* Отступ между блоками */
+    }
+    
+    footer .blocks > div {
+        width: 100% !important; /* Полная ширина */
+    }
+    
+    footer .blocks p {
+        width: 100%; /* Полная ширина для текста */
+    }
+    
+    footer .blocks h4 {
+        font-size: 16px;
+        margin-bottom: 10px;
+    }
+    
+    footer hr {
+        margin: 20px 0;
+    }
+    
+}
